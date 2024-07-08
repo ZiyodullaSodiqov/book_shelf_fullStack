@@ -7,7 +7,7 @@ const bookSchema = mongoose.Schema({
     },
 
     book_url: {
-        type: String , 
+        type: String,
         required: true
     },
 
@@ -15,7 +15,7 @@ const bookSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-   
+
     published: {
         type: Number,
         required: true
@@ -26,17 +26,18 @@ const bookSchema = mongoose.Schema({
         required: true
     },
 
-    condition:{ 
+    condition: {
         type: String,
         required: true
     },
-   
-    date:{
-        type: Date, 
+
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'Register' },
+
+    date: {
+        type: Date,
         default: Date.now()
     }
 
 })
 
 module.exports = mongoose.model('book', bookSchema);
-

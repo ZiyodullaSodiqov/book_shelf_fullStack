@@ -43,6 +43,7 @@ exports.getAll = async(req,res) => {
     })
 }
 
+
 // user edit method PUt
 
 exports.modelPut = async(req,res) => {
